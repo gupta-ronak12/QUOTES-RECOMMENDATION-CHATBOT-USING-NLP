@@ -6,7 +6,7 @@
 
 In today’s fast-paced digital environment, individuals frequently experience stress, demotivation, and emotional imbalance due to academic, professional, and personal challenges. Although motivational quotes are widely available online, users must manually search through multiple websites or platforms to find content that matches their emotional state.
 
-This manual process is:
+This manual process is: 
 
 - Time-consuming  
 - Non-personalized  
