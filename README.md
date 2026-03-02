@@ -133,5 +133,112 @@ The following tools are recommended for development:
 - Git for version control
 - Basic understanding of Python and NLP concepts
 
+##  Project Workflow
 
-  
+
+## Project Workflow
+
+The development of the Quotes Recommendation Chatbot follows a structured milestone-based workflow:
+
+### Milestone 1: Define Problem / Problem Understanding
+- Specify the business problem
+- Define business requirements
+- Conduct literature survey
+- Analyze social or business impact
+
+### Milestone 2: Environment Setup
+- Install Rasa and required dependencies
+- Set up the Rasa project structure
+
+### Milestone 3: Data Collection & Model Building
+- Create user queries (`nlu.yml`)
+- Create bot responses (`domain.yml`)
+- Define conversation stories (`stories.yml`)
+- Train the chatbot model
+- Store and manage trained models
+
+### Milestone 4: Testing & Deployment
+- Test model using Rasa shell
+- Test using test stories
+- Deploy chatbot using web interface
+- Validate deployed chatbot
+
+## Project Structure
+
+## Project Structure
+
+The project follows the standard Rasa directory structure:
+
+```
+quotes-recommendation-chatbot/
+│
+├── data/
+│   ├── nlu.yml
+│   └── stories.yml
+│
+├── domain.yml
+├── config.yml
+├── credentials.yml
+├── endpoints.yml
+│
+├── models/
+│
+└── README.md
+```
+
+### Folder Description
+
+- **data/** → Contains NLU training data and conversation stories  
+- **nlu.yml** → User intents and training examples  
+- **stories.yml** → Conversation flow definitions  
+- **domain.yml** → Intents, entities, responses, and actions  
+- **config.yml** → NLU pipeline configuration  
+- **models/** → Stores trained chatbot models
+
+## Features
+
+- Emotion-based quote recommendation  
+- Intent recognition using Rasa NLU  
+- Structured conversation flow using stories  
+- Custom NLU pipeline configuration  
+- Scalable and modular chatbot architecture  
+- Easy deployment using Rasa shell or web interface
+
+## How to Run the Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/quotes-recommendation-chatbot.git
+cd quotes-recommendation-chatbot
+```
+
+### 2. Activate virtual environment
+
+```bash
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+```
+
+### 3. Train the model
+
+```bash
+rasa train
+```
+
+### 4. Run the chatbot
+
+```bash
+rasa shell
+```
+## Conclusion
+
+The Quotes Recommendation Chatbot demonstrates how Natural Language Processing and Rasa can be used to build an intelligent, emotion-aware conversational system. 
+
+The project follows a structured development lifecycle including problem understanding, environment setup, model training, testing, and deployment.
+
+This chatbot can be extended further by:
+- Integrating a web frontend
+- Connecting to a database of quotes
+- Adding sentiment analysis
+- Deploying on cloud platforms
