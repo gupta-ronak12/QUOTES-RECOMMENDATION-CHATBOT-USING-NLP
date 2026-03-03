@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+- intent: motivation
+  examples: |
+    - I need motivation
+    - motivate me
+    - give me motivational quotes
+    - I feel low
+    - inspire me
+
+- intent: inspiration
+  examples: |
+    - give me inspiration
+    - I need inspiration
+    - inspire me today
+
+- intent: love
+  examples: |
+    - give me love quotes
+    - I want romantic quotes
+    - love quotes please
+
+- intent: success
+  examples: |
+    - success quotes
+    - motivate me for success
+    - career motivation
+
+- intent: funny
+  examples: |
+    - tell me something funny
+    - funny quotes
+    - make me laugh
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you

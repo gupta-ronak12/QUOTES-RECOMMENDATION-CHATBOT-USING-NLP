@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - greet
+  - motivation
+  - inspiration
+  - love
+  - success
+  - funny
+  - goodbye
+  - iamabot
+
+responses:
+  utter_greet:
+    - text: "Hi! What kind of quote do you want today? Motivation, Love, Success, Funny?"
+
+  utter_motivation:
+    - text: "Push yourself, because no one else is going to do it for you."
+    - text: "Success starts with self-belief."
+
+  utter_inspiration:
+    - text: "Dream big and dare to fail."
+    - text: "Your only limit is your mind."
+
+  utter_love:
+    - text: "Love is not what you say, love is what you do."
+    - text: "Where there is love, there is life."
+
+  utter_success:
+    - text: "Success is not final, failure is not fatal."
+    - text: "Work hard in silence, let success make the noise."
+
+  utter_funny:
+    - text: "I am on a seafood diet. I see food and I eat it."
+    - text: "Why don’t scientists trust atoms? Because they make up everything!"
+
+  utter_goodbye:
+    - text: "Goodbye! Stay positive 😊"
+
+  utter_iamabot:
+    - text: "Yes, I am a bot created using Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
