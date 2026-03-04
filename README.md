@@ -279,6 +279,41 @@ rasa train
 ```bash
 rasa shell
 ```
+## Model Testing & Evaluation
+
+After training the chatbot model, testing was performed using Rasa’s built-in testing framework to evaluate the chatbot’s performance in predicting correct actions and responses.
+
+### Testing Method
+
+The chatbot was tested using the following command:
+```bash
+rasa test core
+```
+### Testing Results
+
+The evaluation results obtained were:
+
+| Metric | Value |
+|------|------|
+| Correct Predictions | 58 / 58 |
+| Accuracy | 1.000 |
+| Precision | 1.000 |
+| F1 Score | 1.000 |
+
+These results indicate that the chatbot correctly predicts the appropriate responses for all test stories.
+
+### Confusion Matrix
+
+The confusion matrix generated during testing shows that all predicted actions match the expected actions, indicating no misclassification during testing.
+
+### Interpretation
+
+- The chatbot correctly predicts actions for all test stories.
+- The model achieved **100% accuracy** during testing.
+- High precision and F1 score indicate correct intent recognition.
+- The chatbot successfully returns the appropriate quote category based on user input.
+
+
 ## Conclusion
 
 The Quotes Recommendation Chatbot demonstrates how Natural Language Processing and Rasa can be used to build an intelligent, emotion-aware conversational system. 
