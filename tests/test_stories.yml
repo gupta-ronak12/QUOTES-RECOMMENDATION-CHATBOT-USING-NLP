@@ -37,3 +37,17 @@ stories:
           how can i reach my goals
         intent: success
       - action: utter_success
+
+  - story: love quote
+    steps:
+      - user: |
+          give me a love quote
+        intent: love
+      - action: utter_love
+
+  - story: inspirational wisdom
+    steps:
+      - user: |
+          share some wisdom
+        intent: inspiration
+      - action: utter_inspiration      
