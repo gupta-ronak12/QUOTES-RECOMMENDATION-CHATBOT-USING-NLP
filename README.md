@@ -302,9 +302,18 @@ The evaluation results obtained were:
 
 These results indicate that the chatbot correctly predicts the appropriate responses for all test stories.
 
+
 ### Confusion Matrix
 
 The confusion matrix generated during testing shows that all predicted actions match the expected actions, indicating no misclassification during testing.
+
+#### TED Policy Confusion Matrix
+
+![TED Policy Confusion Matrix](results/TEDPolicy_confusion_matrix.png)
+
+#### Story Confusion Matrix
+
+![Story Confusion Matrix](results/story_confusion_matrix.png)
 
 ### Interpretation
 
