@@ -1,13 +1,15 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Daily Inspiration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- Animated Background -->
@@ -18,142 +20,103 @@
     <div id="particles"></div>
 </div>
 
-<!-- ===== LANDING SCREEN ===== -->
+
+<!-- LANDING SCREEN -->
 <div class="screen" id="landing-screen">
+
     <div class="landing-card" id="landing-card">
+
         <div class="logo-ring">
             <div class="logo-inner">✨</div>
         </div>
+
         <h1>Daily Inspiration</h1>
-        <p>Your personal AI companion for wisdom, motivation, and clarity. Discover the perfect quote for every moment of your life.</p>
+
+        <p>
+            Your personal AI companion for wisdom, motivation, and clarity.
+            Discover the perfect quote for every moment of your life.
+        </p>
+
         <button class="start-btn" onclick="startChat()">
             <span>START CHATTING</span>
             <div class="btn-shimmer"></div>
         </button>
+
         <div class="categories">
             <span class="cat-pill" onclick="landingQuick('Motivation')">✦ Motivation</span>
             <span class="cat-pill" onclick="landingQuick('Love')">♥ Love</span>
             <span class="cat-pill" onclick="landingQuick('Success')">★ Success</span>
         </div>
+
     </div>
+
 </div>
 
-<!-- ===== CHAT SCREEN ===== -->
+
+<!-- CHAT SCREEN -->
 <div class="screen hidden" id="chat-screen">
+
     <div class="chat-wrapper" id="chat-card">
 
         <div class="chat-header">
+
             <button class="back-btn" onclick="goBack()">&#8592;</button>
+
             <div class="bot-avatar">🤖</div>
+
             <div class="header-info">
                 <h2>Quotes Bot</h2>
                 <span class="status">● Online</span>
             </div>
+
         </div>
+
 
         <div id="chat-box" class="chat-box"></div>
 
-        <div class="quick-replies">
-            <button onclick="quickReply('Motivational')">💪 Motivation</button>
-            <button onclick="quickReply('Love')">❤️ Love</button>
-            <button onclick="quickReply('Success')">🏆 Success</button>
-            <button onclick="quickReply('Funny')">😄 Funny</button>
-        </div>
-
-        <div class="input-container">
-            <input type="text" id="user-input" placeholder="Ask for motivation, love, hope..." />
-            <button class="send-btn" onclick="sendMessage()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-            </button>
-        </div>
-
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Daily Inspiration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<!-- Animated Background -->
-<div class="bg-animation">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div id="particles"></div>
-</div>
-
-<!-- ===== LANDING SCREEN ===== -->
-<div class="screen" id="landing-screen">
-    <div class="landing-card" id="landing-card">
-        <div class="logo-ring">
-            <div class="logo-inner">✨</div>
-        </div>
-        <h1>Daily Inspiration</h1>
-        <p>Your personal AI companion for wisdom, motivation, and clarity. Discover the perfect quote for every moment of your life.</p>
-        <button class="start-btn" onclick="startChat()">
-            <span>START CHATTING</span>
-            <div class="btn-shimmer"></div>
-        </button>
-        <div class="categories">
-            <span class="cat-pill" onclick="landingQuick('Motivation')">✦ Motivation</span>
-            <span class="cat-pill" onclick="landingQuick('Love')">♥ Love</span>
-            <span class="cat-pill" onclick="landingQuick('Success')">★ Success</span>
-        </div>
-    </div>
-</div>
-
-<!-- ===== CHAT SCREEN ===== -->
-<div class="screen hidden" id="chat-screen">
-    <div class="chat-wrapper" id="chat-card">
-
-        <div class="chat-header">
-            <button class="back-btn" onclick="goBack()">&#8592;</button>
-            <div class="bot-avatar">🤖</div>
-            <div class="header-info">
-                <h2>Quotes Bot</h2>
-                <span class="status">● Online</span>
-            </div>
-        </div>
-
-        <div id="chat-box" class="chat-box"></div>
 
         <div class="quick-replies">
-            <button onclick="quickReply('Motivational')">💪 Motivation</button>
+
+            <button onclick="quickReply('Motivation')">💪 Motivation</button>
+
             <button onclick="quickReply('Love')">❤️ Love</button>
+
             <button onclick="quickReply('Success')">🏆 Success</button>
+
             <button onclick="quickReply('Funny')">😄 Funny</button>
+
         </div>
 
+
         <div class="input-container">
-            <input type="text" id="user-input" placeholder="Ask for motivation, love, hope..." />
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask for motivation, love, hope..."
+            >
+
             <button class="send-btn" onclick="sendMessage()">
+
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5">
+                     stroke="currentColor" stroke-width="2.5">
+
                     <line x1="22" y1="2" x2="11" y2="13"></line>
+
                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+
                 </svg>
+
             </button>
+
         </div>
 
     </div>
+
 </div>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
->>>>>>> 63958431a7e00b3fb658227ec4d959a2610ca6ef

@@ -1,121 +1,118 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hello
-    - hi
-    - hey
-    - good morning
-    - good evening
-    - good afternoon
-    - hi there
-    - hey there
-    - howdy
-    - what's up
-    - greetings
-    - hello there
-    - sup
-    - hiya
 
 - intent: motivation
   examples: |
-    - I need motivation
+    - give me a motivational quote
     - motivate me
-    - give me motivational quotes
-    - I feel low
-    - inspire me
-    - I am feeling demotivated
-    - I need some encouragement
-    - boost my confidence
-    - I feel like giving up
+    - I need some motivation
+    - say something motivating
+    - give me a motivational message
+    - inspire me to work harder
+    - tell me something to motivate me
+    - I feel lazy motivate me
     - help me stay motivated
-    - I need a push
-    - I am feeling lazy
-    - give me energy
-    - I need positivity
-    - cheer me up
-    - I feel discouraged
-    - lift my spirits
+    - say something encouraging
+    - give me a quote to stay motivated
+    - motivate me to study
+    - motivate me to work hard
+    - I need a push to keep going
+    - give me something inspiring
+    - I need encouragement
+    - tell me a motivational line
+    - say something powerful
+    - give me energy to work
+    - motivate me right now
 
 - intent: inspiration
   examples: |
-    - give me inspiration
-    - I need inspiration
-    - inspire me today
+    - inspire me
+    - give me an inspirational quote
     - say something inspiring
-    - I need an inspiring quote
-    - give me an inspiring message
-    - share something that inspires
+    - I need inspiration
+    - tell me something inspiring
+    - inspire me today
+    - give me some inspiration
+    - say an inspirational message
+    - share something inspiring
     - I want to feel inspired
-    - something to inspire me
-    - share an inspirational thought
-    - I need something uplifting
-    - give me hope
+    - inspire my day
+    - give me an inspiring thought
+    - tell me an inspirational line
+    - say something meaningful
+    - I need inspiration in life
+    - share wisdom with me
+    - inspire my mindset
+    - give me inspiration for life
+    - tell me a thoughtful quote
+    - inspire me to be better
 
 - intent: love
   examples: |
-    - give me love quotes
-    - I want romantic quotes
-    - love quotes please
-    - share a romantic quote
-    - I need a quote about love
-    - something romantic
-    - I love someone give me a quote
-    - beautiful love quotes
-    - quotes about relationships
-    - I want to express my love
-    - heartfelt quotes
-    - quotes for my partner
-    - sweet romantic lines
+    - give me a love quote
+    - say something about love
+    - tell me a romantic quote
+    - share a love message
+    - I want a love quote
+    - say something romantic
+    - tell me about love
+    - give me a quote about relationships
+    - share something sweet
+    - say something about romance
+    - tell me a cute love line
+    - give me a romantic message
+    - I want to hear about love
+    - share a beautiful love quote
+    - say something heartfelt
+    - tell me something about relationships
+    - give me something romantic
+    - say something loving
+    - I need a love quote
+    - share a relationship quote
 
 - intent: success
   examples: |
-    - success quotes
+    - give me a success quote
+    - tell me something about success
+    - say something about achieving goals
     - motivate me for success
-    - career motivation
-    - I want to be successful
-    - quotes about achieving goals
-    - help me succeed
-    - I need work motivation
-    - motivate me for my goals
-    - quotes about hard work
-    - I want to reach my dreams
-    - inspire me to work harder
-    - business motivation quotes
-    - quotes for students
-    - I want to achieve something great
+    - give me a quote about winning
+    - share a success message
+    - tell me a quote about achievement
+    - say something about reaching goals
+    - I want a success quote
+    - give me advice about success
+    - tell me how to succeed
+    - share a quote about achievement
+    - inspire me for success
+    - say something about hard work and success
+    - give me wisdom about success
+    - tell me something about achieving dreams
+    - share a quote about ambition
+    - say something about reaching success
+    - give me success motivation
+    - tell me something powerful about success
 
 - intent: funny
   examples: |
-    - tell me something funny
-    - funny quotes
-    - make me laugh
-    - say something humorous
-    - I need a laugh
-    - cheer me up with humor
-    - crack a joke
     - tell me a joke
-    - something witty please
-    - I want to smile
-    - humor me
-    - give me a fun quote
-    - lighten my mood
-    - I need comic relief
-
-- intent: goodbye
-  examples: |
-    - bye
-    - goodbye
-    - see you
-    - see you later
-    - take care
-    - catch you later
-    - I am leaving
-    - talk to you later
-    - have a good day
-    - good night
-    - farewell
-    - until next time
-    - I'll talk to you soon
-    - peace out
+    - say something funny
+    - make me laugh
+    - tell me something hilarious
+    - I want a funny quote
+    - say a funny line
+    - tell me something silly
+    - share a joke
+    - I need a laugh
+    - say something humorous
+    - give me a funny quote
+    - make me smile
+    - tell me a funny story
+    - share something funny
+    - say something entertaining
+    - give me a joke
+    - tell me something amusing
+    - say something witty
+    - make me laugh today
+    - give me some humor
