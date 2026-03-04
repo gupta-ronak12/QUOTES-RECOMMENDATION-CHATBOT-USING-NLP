@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Give motivation
+  steps:
+    - intent: motivation
+    - action: utter_motivation
+
+- rule: Give inspiration
+  steps:
+    - intent: inspiration
+    - action: utter_inspiration
+
+- rule: Give love quotes
+  steps:
+    - intent: love
+    - action: utter_love
+
+- rule: Give success quotes
+  steps:
+    - intent: success
+    - action: utter_success
+
+- rule: Tell something funny
+  steps:
+    - intent: funny
+    - action: utter_funny
+
+- rule: Say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye

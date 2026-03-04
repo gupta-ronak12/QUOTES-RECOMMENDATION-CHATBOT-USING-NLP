@@ -1,0 +1,80 @@
+version: "3.1"
+
+stories:
+
+- story: greet and motivate
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: motivation
+    - action: utter_motivation
+
+- story: greet and inspiration
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: inspiration
+    - action: utter_inspiration
+
+- story: greet and love
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: love
+    - action: utter_love
+
+- story: greet and success
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: success
+    - action: utter_success
+
+- story: greet and funny
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: funny
+    - action: utter_funny
+
+- story: greet and goodbye
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: motivation then goodbye
+  steps:
+    - intent: motivation
+    - action: utter_motivation
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: inspiration then goodbye
+  steps:
+    - intent: inspiration
+    - action: utter_inspiration
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: love then goodbye
+  steps:
+    - intent: love
+    - action: utter_love
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: success then goodbye
+  steps:
+    - intent: success
+    - action: utter_success
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: funny then goodbye
+  steps:
+    - intent: funny
+    - action: utter_funny
+    - intent: goodbye
+    - action: utter_goodbye

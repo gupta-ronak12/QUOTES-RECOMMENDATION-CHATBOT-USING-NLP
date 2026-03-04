@@ -1,0 +1,121 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - good afternoon
+    - hi there
+    - hey there
+    - howdy
+    - what's up
+    - greetings
+    - hello there
+    - sup
+    - hiya
+
+- intent: motivation
+  examples: |
+    - I need motivation
+    - motivate me
+    - give me motivational quotes
+    - I feel low
+    - inspire me
+    - I am feeling demotivated
+    - I need some encouragement
+    - boost my confidence
+    - I feel like giving up
+    - help me stay motivated
+    - I need a push
+    - I am feeling lazy
+    - give me energy
+    - I need positivity
+    - cheer me up
+    - I feel discouraged
+    - lift my spirits
+
+- intent: inspiration
+  examples: |
+    - give me inspiration
+    - I need inspiration
+    - inspire me today
+    - say something inspiring
+    - I need an inspiring quote
+    - give me an inspiring message
+    - share something that inspires
+    - I want to feel inspired
+    - something to inspire me
+    - share an inspirational thought
+    - I need something uplifting
+    - give me hope
+
+- intent: love
+  examples: |
+    - give me love quotes
+    - I want romantic quotes
+    - love quotes please
+    - share a romantic quote
+    - I need a quote about love
+    - something romantic
+    - I love someone give me a quote
+    - beautiful love quotes
+    - quotes about relationships
+    - I want to express my love
+    - heartfelt quotes
+    - quotes for my partner
+    - sweet romantic lines
+
+- intent: success
+  examples: |
+    - success quotes
+    - motivate me for success
+    - career motivation
+    - I want to be successful
+    - quotes about achieving goals
+    - help me succeed
+    - I need work motivation
+    - motivate me for my goals
+    - quotes about hard work
+    - I want to reach my dreams
+    - inspire me to work harder
+    - business motivation quotes
+    - quotes for students
+    - I want to achieve something great
+
+- intent: funny
+  examples: |
+    - tell me something funny
+    - funny quotes
+    - make me laugh
+    - say something humorous
+    - I need a laugh
+    - cheer me up with humor
+    - crack a joke
+    - tell me a joke
+    - something witty please
+    - I want to smile
+    - humor me
+    - give me a fun quote
+    - lighten my mood
+    - I need comic relief
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - take care
+    - catch you later
+    - I am leaving
+    - talk to you later
+    - have a good day
+    - good night
+    - farewell
+    - until next time
+    - I'll talk to you soon
+    - peace out
