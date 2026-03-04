@@ -36,3 +36,8 @@ rules:
   steps:
     - intent: goodbye
     - action: utter_goodbye
+
+- rule: Respond to bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
