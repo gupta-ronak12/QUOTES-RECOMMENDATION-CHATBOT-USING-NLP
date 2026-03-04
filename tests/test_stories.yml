@@ -23,3 +23,17 @@ stories:
           tell me something funny
         intent: funny
       - action: utter_funny
+
+  - story: success quote request
+    steps:
+      - user: |
+          give me a success quote
+        intent: success
+      - action: utter_success
+
+  - story: success motivation flow
+    steps:
+      - user: |
+          how can i reach my goals
+        intent: success
+      - action: utter_success
