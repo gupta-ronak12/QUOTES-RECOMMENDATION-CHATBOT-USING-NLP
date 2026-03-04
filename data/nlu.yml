@@ -116,3 +116,32 @@ nlu:
     - say something witty
     - make me laugh today
     - give me some humor
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - hi there
+    - hello there
+    - hey bot
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - take care
+    - talk to you later
+    - catch you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot
+    - are you human
+    - who are you
+    - what are you
+    - are you a real person

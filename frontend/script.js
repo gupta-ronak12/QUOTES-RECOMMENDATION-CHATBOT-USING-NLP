@@ -1,36 +1,38 @@
-const chatBox    = document.getElementById("chat-box");
+const chatBox = document.getElementById("chat-box");
 const inputField = document.getElementById("user-input");
 const landingCard = document.getElementById("landing-card");
-const chatCard    = document.getElementById("chat-card");
+const chatCard = document.getElementById("chat-card");
 
-// ===== ENTER KEY SUPPORT =====
 inputField.addEventListener("keydown", (e) => {
     if (e.key === "Enter") sendMessage();
 });
 
-// ===== GENERATE FLOATING PARTICLES =====
 (function generateParticles() {
     const container = document.getElementById("particles");
+
     for (let i = 0; i < 25; i++) {
         const p = document.createElement("div");
         p.classList.add("particle");
+
         const size = Math.random() * 4 + 2;
+
         p.style.cssText = `
-            left: ${Math.random() * 100}vw;
-            width: ${size}px;
-            height: ${size}px;
-            animation-duration: ${Math.random() * 18 + 10}s;
-            animation-delay: ${Math.random() * 12}s;
-            opacity: ${Math.random() * 0.5 + 0.2};
+            left:${Math.random()*100}vw;
+            width:${size}px;
+            height:${size}px;
+            animation-duration:${Math.random()*18+10}s;
+            animation-delay:${Math.random()*12}s;
+            opacity:${Math.random()*0.5+0.2};
         `;
+
         container.appendChild(p);
     }
 })();
 
-// ===== SCREEN TRANSITIONS =====
 function startChat() {
     document.getElementById("landing-screen").classList.add("hidden");
     document.getElementById("chat-screen").classList.remove("hidden");
+
     setTimeout(() => {
         addMessage(
             "How are you feeling today? I can share something motivational, inspirational, love, success or funny.",
@@ -47,33 +49,40 @@ function goBack() {
 
 function landingQuick(type) {
     startChat();
+
     setTimeout(() => {
         inputField.value = type;
         sendMessage();
     }, 900);
 }
 
-// ===== MESSAGES =====
 function addMessage(text, sender) {
     const msg = document.createElement("div");
+
     msg.classList.add("message", sender);
     msg.innerText = text;
+
     chatBox.appendChild(msg);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function showTypingIndicator() {
+
     removeTypingIndicator();
+
     const el = document.createElement("div");
+
     el.classList.add("typing-indicator");
     el.id = "typing";
     el.innerHTML = `<span></span><span></span><span></span>`;
+
     chatBox.appendChild(el);
-    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function removeTypingIndicator() {
-    document.getElementById("typing")?.remove();
+    const typing = document.getElementById("typing");
+
+    if (typing) typing.remove();
 }
 
 function quickReply(text) {
@@ -81,47 +90,56 @@ function quickReply(text) {
     sendMessage();
 }
 
-// ===== SEND MESSAGE TO RASA =====
 async function sendMessage() {
+
     const userText = inputField.value.trim();
+
     if (!userText) return;
 
     addMessage(userText, "user");
+
     inputField.value = "";
+
     showTypingIndicator();
 
     try {
-        const response = await fetch("http://localhost:5005/webhooks/rest/webhook", {
+
+        const response = await fetch("http://127.0.0.1:5000/chat", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ sender: "user", message: userText })
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                message: userText
+            })
         });
 
         const data = await response.json();
+
         removeTypingIndicator();
 
-        if (!data || data.length === 0) {
-            addMessage("🤔 I'm not sure how to respond to that.", "bot");
+        if (!data.reply) {
+            addMessage("🤔 I am not sure how to respond.", "bot");
             return;
         }
 
-        // Stagger bot replies for a natural feel
-        data.forEach((botReply, i) => {
-            if (botReply.text) {
-                setTimeout(() => addMessage(botReply.text, "bot"), i * 350);
-            }
-        });
+        addMessage(data.reply, "bot");
 
-    } catch (err) {
+    } catch (error) {
+
         removeTypingIndicator();
+
         addMessage("⚠ Unable to connect to chatbot server.", "bot");
+
+        console.error(error);
     }
 }
 
-// ===== 3D TILT EFFECT =====
 document.addEventListener("mousemove", (e) => {
-    const x = (window.innerWidth  / 2 - e.pageX) / 28;
+
+    const x = (window.innerWidth / 2 - e.pageX) / 28;
     const y = (window.innerHeight / 2 - e.pageY) / 28;
+
     const tilt = `rotateY(${x}deg) rotateX(${y}deg)`;
 
     if (!document.getElementById("landing-screen").classList.contains("hidden"))
@@ -131,6 +149,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("mouseleave", () => {
+
     landingCard.style.transform = "rotateY(0deg) rotateX(0deg)";
-    chatCard.style.transform    = "rotateY(0deg) rotateX(0deg)";
+    chatCard.style.transform = "rotateY(0deg) rotateX(0deg)";
 });
