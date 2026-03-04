@@ -51,3 +51,30 @@ stories:
           share some wisdom
         intent: inspiration
       - action: utter_inspiration      
+
+
+  - story: conversation ending
+    steps:
+      - user: |
+          bye
+        intent: goodbye
+      - action: utter_goodbye
+
+  - story: full conversation flow
+    steps:
+      - user: |
+          hi
+        intent: greet
+      - action: utter_greet
+      - user: |
+          motivate me
+        intent: motivation
+      - action: utter_motivation
+      - user: |
+          tell me something funny
+        intent: funny
+      - action: utter_funny
+      - user: |
+          bye
+        intent: goodbye
+      - action: utter_goodbye      
